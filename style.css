@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -94,10 +94,12 @@ body {
 }
 
 .head-image {
-    text-align: center;
     padding: 50px 0px;
 }
-
+.head-image>img{
+   max-width: 100%;
+   margin: 0 auto;
+}
 /* List style */
 
 .list-flex {
@@ -135,12 +137,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .feature-content {
-    margin-right: 50px;
-    width: 40%;
+    width: 100%;
 }
 
 .feature-title {
@@ -150,7 +150,7 @@ body {
 }
 
 .feature-description {
-    margin: 24px 0 32px 0;
+   padding: 24px 0 32px 0;
 }
 
 .card {
@@ -167,7 +167,15 @@ body {
 .card p {
     padding: 0 42px 30px 35px;
 }
-
+.feature-image {
+   
+    width: 100%;
+    text-align: center;
+}
+.feature-image > img{
+    max-width: 100%;
+    height: auto;
+}
 .experience {
     padding: 42px 45px;
     position: relative;
@@ -182,12 +190,10 @@ body {
 
 .exp {
     font-size: 1.5rem;
-    font-weight: 500px;
+    font-weight: 500;
 }
 
-.feature-image {
-    width: 50%;
-}
+
 
 /* facts style */
 
@@ -250,10 +256,40 @@ body {
     padding: 38px 0;
 }
 
-@media screen and (max-width:640px) {
-    .container {
-        width: 100%
+
+@media screen and (max-width:960px) {
+  
+    .list-flex{
+        flex-direction: column-reverse;
     }
+
+    .list-content{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .feature-flex,
+    .logo-flex {
+        flex-direction: column;}
+    .feature-image{
+        margin-top: 100px;
+    }
+    .badge-flex{
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    .logo-flex{
+        justify-content: space-between;
+        align-items: center;
+        gap:50px;
+    }
+    
+    .foot{
+        margin-bottom: 10px;
+    } 
+    }
+
+@media screen and (max-width:576px) {
+  
 .nav-flex, .feature-flex,
 .badge-flex, .logo-flex {
     flex-direction: column;
@@ -262,7 +298,7 @@ body {
     padding-top: 50px;
 }
 .head-image > img{
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
 }
 .list-flex{
@@ -283,7 +319,7 @@ body {
     text-align: center;
     width: 100%;
 }
-.feature-image> img{
+.feature-image > img{
     width: 80%;
 }
 .facts-content{
